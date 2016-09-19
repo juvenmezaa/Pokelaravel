@@ -15,7 +15,7 @@ class pokemonController extends Controller
     	return view("registrarPokemon", compact("tipos"));
     }
     public function guardar(Request $request){
-		dd($request);
+		dd($_POST);
 
 		return Redirect('/registrarPokemon');
     }

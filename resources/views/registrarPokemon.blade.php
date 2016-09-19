@@ -18,7 +18,7 @@
 			<div class="checkbox">
 	          @foreach($tipos as $t)
 	          	<label>
-	            	<input type="checkbox" value="{{$t->id}}"> {{$t->nombre}}
+	            	<input type="checkbox" name="tipo[]" value="{{$t->id}}"> {{$t->nombre}}
 	          	</label>
 	          @endforeach
 	        </div>
@@ -38,6 +38,10 @@
 		<div class="form-group">
 			<label for="ps">PS</label>
 			<input type="number" min="0" class="form-control" name="ps">
+		</div>
+		<div class="form-group">
+			<label for="imagen">Imagen</label>
+			<input type="file" min="0" class="form-control" name="imagen">
 		</div>
 		<div class="form-group">
 			<input type="submit" class="btn btn-primary">
