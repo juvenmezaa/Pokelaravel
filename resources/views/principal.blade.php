@@ -5,6 +5,7 @@
 	<title>Document</title>
 	<script src="{{asset('js/jquery.min.js')}}"></script>
 	<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+	<link rel="shortcut icon" href="favicon.ico"/>
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -24,7 +25,7 @@
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Opciones <span class="caret"></span></a>
 	          <ul class="dropdown-menu" role="menu">
-		        <li><a href="{{url('/consultarPokemon')}}">Consultar Pokémon</a></li>
+		        <li><a href="#">Consultar Pokémon</a></li>
 	            <li class="divider"></li>
 		        <li><a href="{{url('/consultarTipos')}}">Consultar Tipos</a></li>
 	            <li class="divider"></li>
@@ -42,6 +43,9 @@
 	    </div>
 	  </div>
 	</nav>
+	<div class="slider-wrapper">
+	
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
