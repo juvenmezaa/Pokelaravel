@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
 	<link rel="shortcut icon" href="favicon.ico"/>
 </head>
-<body>
+<body background="img/fondo.png" style="background-size: 80%;">
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
@@ -43,7 +43,7 @@
 	    </div>
 	  </div>
 	</nav>
-	<div class="slider-wrapper">
+	<div class="container">
 	
 	</div>
 	<div class="container">

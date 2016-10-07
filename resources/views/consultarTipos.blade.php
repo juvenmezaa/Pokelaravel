@@ -1,6 +1,6 @@
 @extends("principal")
 @section("encabezado")
-	<h2>Consultar Usuarios</h2>
+	<h2>Consultar Tipos</h2>
 @stop
 @section("contenido")
 	<table class="table table-hover">
