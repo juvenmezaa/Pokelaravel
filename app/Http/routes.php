@@ -17,3 +17,4 @@ Route::post('/guardarPokemon', 'pokemonController@guardar');
 Route::get('/registrarTipo', 'tipoController@registrarTipo');
 Route::post('/guardarTipo ', 'tipoController@guardar');
 Route::get('/consultarTipos', 'tipoController@consultar');
+Route::get('/pokedex', 'pokemonController@pokedex');
