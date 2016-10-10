@@ -52,6 +52,7 @@
 			</div>
 			<br>
 			<div id="infotipos">
+				<b>Tipos</b>
 				<ul>
 				@foreach($tipos as $t) 
 				<li>

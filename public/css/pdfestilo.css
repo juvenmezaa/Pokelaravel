@@ -74,7 +74,8 @@ td{
 	width: 80px;
 	text-align: center;
 }
-#infotipos ul{
+#infotipos ul li{
+	width: 80px;
 	display: inline-block;
 }
 .1{
