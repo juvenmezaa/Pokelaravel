@@ -4,6 +4,9 @@
 @stop
 @section("contenido")
 <section id="resultadospokedex">
+	@if(isset($pokemon[0]->nomTipo))
+		<h3>{{$pokemon[0]->nomTipo}}</h3>
+	@endif
 	<ul>
 		@foreach($pokemon as $p)
 		<li>
@@ -11,7 +14,7 @@
 			<!--	<a href="{{url('/pokemon')}}/{{$p->id}}">-->
 					<a href="{{url('/pokemon')}}/{{$p->id}}">
 				<input type="hidden" value="{{$p->id}}" name="id_pok">
-				<img src="img/{{$p->imagen}}" alt="{{$p->nombre}}" width="200px">
+				<img src="{{asset('img')}}/{{$p->imagen}}" alt="{{$p->nombre}}" width="200px">
 				</a>
 			</figure>
 			<div id="info">

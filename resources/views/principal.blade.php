@@ -27,6 +27,8 @@
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Opciones <span class="caret"></span></a>
 	          <ul class="dropdown-menu" role="menu">
+		        <li><a href="{{url('/pokedex/tipos')}}">Pokémon X Tipos</a></li>
+	            <li class="divider"></li>
 		        <li><a href="{{url('/consultarTipos')}}">Consultar Tipos</a></li>
 	            <li class="divider"></li>
 		        <li><a href="{{url('/registrarTipo')}}">Registrar Tipo</a></li>

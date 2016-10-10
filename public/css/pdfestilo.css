@@ -65,13 +65,14 @@ td,th{
 	width: 120px;
 }
 td{
-	text-align: center;
+	/*text-align: center;*/
 }
 .sptipo{
 	border-radius: 5px;
 	height: 25px;
 	color: white;
 	width: 80px;
+	text-align: center;
 }
 #infotipos ul{
 	display: inline-block;

@@ -27,3 +27,7 @@ Route::get('/eliminarTipo/{id}', 'tipoController@eliminar');
 Route::get('/actualizarTipo/{id}', 'tipoController@actualizarTipo');
 Route::post('/actualizaTipo/{id}', 'tipoController@actualizar');
 
+Route::get('/pokedex/tipos', 'pokemonController@poketipos');
+Route::post('/pokedex/tipo', 'pokemonController@poketipo');
+Route::get('/pokedex/{id}', 'pokemonController@pokedex2');
+

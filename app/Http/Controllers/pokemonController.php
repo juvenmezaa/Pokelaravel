@@ -52,10 +52,21 @@ class pokemonController extends Controller
 
    	public function pokedex(){
         $pokemon=DB::table('pokemon')->paginate(5);
-       // $pokemon=pokemonModel::all();
-        $pok_tip=pokemon_tipo::all();
-   		return view("pokedex", compact("pokemon", "pok_tip"));
+   		return view("pokedex", compact("pokemon"));
    	}
+
+    public function poketipos(){
+        $tipos=DB::table("tipo AS t")->join("pokemon_tipo AS pt", "t.id","=","pt.idTipo")->select("t.*")->distinct()->get();
+        return view("poketipos", compact("tipos"));
+    }
+    public function poketipo(Request $request){
+        $tipo = $request->input("tipo");
+        return Redirect("/pokedex/$tipo");
+    }
+    public function pokedex2($idTipo){
+        $pokemon=DB::table("pokemon AS p")->join("pokemon_tipo AS pt", "p.id","=","pt.idPokemon")->join("tipo as t","pt.idTipo","=","t.id")->where("pt.idTipo","=", $idTipo)->select("p.*","t.nombre as nomTipo")->distinct()->paginate(1);
+        return view("pokedex", compact("pokemon"));
+    }
 
     /*public function pokeinfo($id){
          $pokemon=pokemonModel::find($id);
