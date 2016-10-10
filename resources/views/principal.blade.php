@@ -9,7 +9,7 @@
 	<link rel="shortcut icon" href="favicon.ico"/>
 	<link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
 </head>
-<body background="img/fondo.png" style="background-size: 80%;">
+<body background="{{asset('img/fondo.png')}}" style="background-size: 80%;">
 	<nav class="navbar navbar-default">
 	  <div class="container-fluid">
 	    <div class="navbar-header">

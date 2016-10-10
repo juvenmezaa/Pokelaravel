@@ -9,7 +9,7 @@
 		<li>
 			<figure class="figpokedex">
 			<!--	<a href="{{url('/pokemon')}}/{{$p->id}}">-->
-					<a href="{{url('/pokemon')}}">
+					<a href="{{url('/pokemon')}}/{{$p->id}}">
 				<input type="hidden" value="{{$p->id}}" name="id_pok">
 				<img src="img/{{$p->imagen}}" alt="{{$p->nombre}}" width="200px">
 				</a>
