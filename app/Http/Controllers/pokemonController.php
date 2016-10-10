@@ -63,12 +63,13 @@ class pokemonController extends Controller
     }*/
     public function pokeinfo($id){
          $pokemon=pokemonModel::find($id);
-         return view("pokemoninfo", compact("pokemon"));
+         return view("pokemoninfo", compact("pokemon"))->lists("idTipo");;
     }
 
     public function pdfPokemon($id){
         $pokemon=pokemonModel::find($id);
-        $vista=view('pdfPokemon', compact('pokemon'));
+        $tipos=DB::table("tipo AS t")->join("pokemon_tipo AS pt", "t.id","=","pt.idTipo")->where("pt.idPokemon","=", $id)->select("t.nombre")->get();
+        $vista=view('pdfPokemon', compact('pokemon','tipos'));
         $dompdf=\App::make('dompdf.wrapper');
         $dompdf->loadHTML($vista);
         return $dompdf->stream();

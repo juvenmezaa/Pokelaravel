@@ -53,18 +53,14 @@
 				<br>
 				<div id="infotipos">
 					<ul>
-					<!--@foreach($tipo as $t) 
+					@foreach($tipos as $t) 
 					<li>
 						<figure class="sptipo $t">
-							{{$tipo.nombre}}
+							{{$t->nombre}}
 						</figure>
-						
 					</li>
 					@endforeach
-
-					-->
 					</ul>
-
 			</div>
 		</figure>
 		<br>&nbsp;
