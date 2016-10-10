@@ -47,4 +47,15 @@ class pokemonController extends Controller
 
 		return Redirect('/registrarPokemon');
     }
+
+   	public function pokedex(){
+        $pokemon=pokemonModel::all();
+        $pok_tip=pokemon_tipo::all();
+   		return view("pokedex", compact("pokemon", "pok_tip"));
+   	}
+
+    public function pokeinfo($id){
+         $pokemon=pokemonModel::find($id);
+         return view("pokemoninfo", compact("pokemon"));
+    }
 }

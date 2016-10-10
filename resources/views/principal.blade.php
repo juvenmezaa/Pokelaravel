@@ -5,6 +5,7 @@
 	<title>Document</title>
 	<script src="{{asset('js/jquery.min.js')}}"></script>
 	<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+	<link rel="stylesheet" href="{{asset('css/estilos.css')}}">
 	<link rel="shortcut icon" href="favicon.ico"/>
 </head>
 <body background="img/fondo.png" style="background-size: 80%;">
@@ -33,6 +34,7 @@
 		        <li><a href="{{url('/registrarPokemon')}}">Registrar Pokémon</a></li>
 	          </ul>
 	        </li>
+	        <li><a href="{{url('/pokedex')}}"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Pokédex</a></li>
 	      </ul>
 	      <form class="navbar-form navbar-right" role="search">
 	        <div class="form-group">

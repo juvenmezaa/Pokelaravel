@@ -1,0 +1,26 @@
+figure {
+    background: #F2F2F2;
+   /* float: left;*/
+    display: block;
+    position: relative;
+    border-radius: 5px;
+    width: 100%;
+    padding-top: 20%;
+}
+figure img{
+	float: center;
+}
+#resultadospokedex ul li{
+ 	display: inline-block;
+}
+#info{
+	clear: both;
+    position: relative;
+    top: -5px;
+    padding-left: 7.2525%;
+    background-color: #DAF7A6;
+    border-radius: 5px;
+}
+.datos{
+	background-color: blue;
+}
