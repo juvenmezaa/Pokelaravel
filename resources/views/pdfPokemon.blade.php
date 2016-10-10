@@ -53,13 +53,17 @@
 				<br>
 				<div id="infotipos">
 					<ul>
-						<li>
-						<figure class="sptipo 1">
-							Planta
+					<!--@foreach($tipo as $t) 
+					<li>
+						<figure class="sptipo $t">
+							{{$tipo.nombre}}
 						</figure>
 						
 					</li>
-				</ul>
+					@endforeach
+
+					-->
+					</ul>
 
 			</div>
 		</figure>

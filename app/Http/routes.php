@@ -15,8 +15,9 @@ Route::get('/', 'principalController@index');
 Route::get('/registrarPokemon', 'pokemonController@registrarPokemon');
 Route::post('/guardarPokemon', 'pokemonController@guardar');
 Route::get('/pokedex', 'pokemonController@pokedex');
-//Route::get('/pokemon/{id}/', 'pokemonController@pokeinfo');
-Route::get('/pokemon', 'pokemonController@pokeinfo');
+
+Route::get('/pokemon/{id}/', 'pokemonController@pokeinfo');
+//Route::get('/pokemon', 'pokemonController@pokeinfo');
 Route::get('/pdfPokemon/{id}', 'pokemonController@pdfPokemon');
 
 Route::get('/registrarTipo', 'tipoController@registrarTipo');
@@ -25,3 +26,4 @@ Route::get('/consultarTipos', 'tipoController@consultar');
 Route::get('/eliminarTipo/{id}', 'tipoController@eliminar');
 Route::get('/actualizarTipo/{id}', 'tipoController@actualizarTipo');
 Route::post('/actualizaTipo/{id}', 'tipoController@actualizar');
+
