@@ -23,4 +23,7 @@
 			@endforeach
 		</tbody>
 	</table>
+	<div id="paginas">
+		{!! $tipos->render() !!}
+	</div>
 @stop

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\tipoModel;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use DB;
 
 class tipoController extends Controller
 {
@@ -23,7 +24,7 @@ class tipoController extends Controller
 		return Redirect('/registrarTipo');
     }
     public function consultar(){
-    	$tipos=tipoModel::all();
+    	$tipos=DB::table('tipo')->paginate(5);
     	return view("consultarTipos", compact("tipos"));
     }
 }

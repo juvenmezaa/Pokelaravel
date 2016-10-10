@@ -1,6 +1,12 @@
 footer{
 	color: whitesmoke;
 }
+table thead{
+	color: #CB1D0E;
+}
+table tbody{
+	color: whitesmoke;
+}
 .figpokedex {
     background: #F2F2F2;
    /* float: left;*/
