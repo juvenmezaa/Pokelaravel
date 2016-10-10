@@ -36,31 +36,31 @@
 						<th class="sptd">PC</th>
 					</tr>
 					<tr>
-						<td>{{$pokemon->altura}}<td>
-							<td>{{$pokemon->pc}}</td>
-						</tr>
-						<tr>
-							<th class="sptd">PS</th>
-							<th class="sptd">Polvos</th>
+						<td>{{$pokemon->altura}}</td>
+						<td>{{$pokemon->pc}}</td>
+					</tr>
+					<tr>
+						<th class="sptd">PS</th>
+						<th class="sptd">Polvos</th>
 
-						</tr>
-						<tr>
-							<td>{{$pokemon->ps}}</td>
-							<td>{{$pokemon->polvos}}</td>
-						</tr>
-					</table>
-				</div>
-				<br>
-				<div id="infotipos">
-					<ul>
-					@foreach($tipos as $t) 
-					<li>
-						<figure class="sptipo $t">
-							{{$t->nombre}}
-						</figure>
-					</li>
-					@endforeach
-					</ul>
+					</tr>
+					<tr>
+						<td>{{$pokemon->ps}}</td>
+						<td>{{$pokemon->polvos}}</td>
+					</tr>
+				</table>
+			</div>
+			<br>
+			<div id="infotipos">
+				<ul>
+				@foreach($tipos as $t) 
+				<li>
+					<figure class="sptipo $t">
+						{{$t->nombre}}
+					</figure>
+				</li>
+				@endforeach
+				</ul>
 			</div>
 		</figure>
 		<br>&nbsp;
