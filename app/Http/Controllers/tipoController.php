@@ -27,4 +27,19 @@ class tipoController extends Controller
     	$tipos=DB::table('tipo')->paginate(5);
     	return view("consultarTipos", compact("tipos"));
     }
+    public function eliminar($id){
+        tipoModel::find($id)->delete();
+        return Redirect("/consultarTipos");
+    }
+    public function actualizarTipo($id){
+        $tipo=tipoModel::find($id);
+        return view("actualizarTipo", compact("tipo"));
+    }
+    public function actualizar($id, Request $request){
+        $tipo=tipoModel::find($id);
+        $tipo->nombre = $request->input("nombre");
+        $tipo->save();
+        return Redirect("/consultarTipos");
+        
+    }
 }
