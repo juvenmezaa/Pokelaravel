@@ -27,8 +27,6 @@
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Opciones <span class="caret"></span></a>
 	          <ul class="dropdown-menu" role="menu">
-		        <li><a href="#">Consultar Pokémon</a></li>
-	            <li class="divider"></li>
 		        <li><a href="{{url('/consultarTipos')}}">Consultar Tipos</a></li>
 	            <li class="divider"></li>
 		        <li><a href="{{url('/registrarTipo')}}">Registrar Tipo</a></li>
@@ -60,7 +58,7 @@
 	</div>
 	<footer>
 		<hr>
-		<center> Ingenieria Web &copy; 2016 <br>&copy; The Pokémon Company / Nintendo</center>
+		<center>Ingenieria Web &copy; 2016 <br>&copy; The Pokémon Company / Nintendo</center>
 	</footer>
 	<script src="{{asset('js/bootstrap.js')}}"></script>
 </body>
