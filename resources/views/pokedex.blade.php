@@ -17,7 +17,7 @@
 			<div id="info">
 				<p><b>#{{$p->id}}</b></p>
 				<p>{{$p->nombre}}</p>
-				<a href="{{url('pdfPokemon')}}/{{$p->id}}"><span class="glyphicon glyphicon-download-alt"></span></a>
+				<a href="{{url('pdfPokemon')}}/{{$p->id}}"><span class="glyphicon glyphicon-save-file"></span></a>
 			</div>
 		</li>
 		@endforeach

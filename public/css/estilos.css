@@ -76,10 +76,92 @@ article{
 }
 #tituloinfo{
 	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
 }
 .display figure{
 	margin-left: 180px;
 }
 #divtipos span{
+
 	font-size: 2em;
 }
+#divtipos b{
+	font-size: 1.2em;
+	
+	font-family: 'Economica', sans-serif;
+}
+#divtipos ul li{
+	font-family: 'Economica', sans-serif;
+	text-align: center;
+	width: 80px;
+	display: inline-block;
+}
+#divtipos ul{
+	margin-left: -190px;
+}
+.sptipo{
+	border-radius: 5px;
+	height: 30px;
+	color: black;
+	width: 80px;
+}
+.t1{
+	background-color: #808080;
+}
+.t2{
+	background-color: #1E90FF;
+}
+.t3{
+	background-color: LimeGreen;	
+}
+.t4{
+	background-color: Orange;
+}
+.t5{
+	background-color: yellow;
+}
+.t6{
+	background-color:;
+}
+.t7{
+	background-color:#FF4500;
+}
+.t8{
+	background-color:HotPink;
+}
+.t9{
+	background-color: MediumAquamarine;
+}
+.t10{
+	background-color:Chocolate;
+}
+.t11{
+	background-color:CadetBlue;
+}
+.t12{
+	background-color:ForestGreen;
+}
+.t13{
+	background-color: DeepPink;
+}
+.t14{
+	background-color:Olive;
+}
+.t15{
+	background-color:DimGray;
+}
+.t16{
+	background-color:Sienna;
+}
+.t17{
+	background-color: MediumOrchid;
+}
+.t18{
+	background-color: PaleTurquoise;
+}
+#pdfinfopk{
+	padding-left: 80%;
+	color: red;
+}
+

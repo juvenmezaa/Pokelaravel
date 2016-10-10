@@ -73,7 +73,8 @@ td{
 	color: white;
 	width: 80px;
 }
-#infotipos ul{
+#infotipos ul li{
+	width: 80px;
 	display: inline-block;
 }
 .1{
