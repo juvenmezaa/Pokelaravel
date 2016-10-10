@@ -1,13 +1,13 @@
 @extends("principal")
 @section("encabezado")
-	<h2>Registrar Tipo</h2>
+	<h2>Actualizar Tipos</h2>
 @stop
 @section("contenido")
-	<form action="{{url('/guardarTipo')}}" method="POST">
+	<form action="{{url('/actualizaTipo')}}/{{$tipo->id}}" method="POST">
 		<input type="hidden" name="_token" value="{{csrf_token()}}">
 		<div class="form-group">
 			<label for="nombre">Nombre</label>
-			<input type="text" class="form-control" name="nombre">
+			<input type="text" class="form-control" name="nombre" value="{{$tipo->nombre}}">
 		</div>
 		<div class="form-group">
 			<input type="submit" class="btn btn-primary">

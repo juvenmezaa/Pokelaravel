@@ -21,7 +21,7 @@ class pokemonController extends Controller
 
 		$numero=$request->input('numero');
 		$nombre=$request->input('nombre');
-		$tipo=$request->input('tipo[]');
+		$tipo=$request->input('tipo');
 		$peso=$request->input('peso');
 		$altura=$request->input('altura');
 		$pc=$request->input('pc');
@@ -39,12 +39,13 @@ class pokemonController extends Controller
     	$nuevo->polvos='100';
     	$nuevo->imagen=$imagen;
     	$nuevo->save();
-
-    	$nuevoTP=new pokemon_tipo;
-    	$nuevoTP->idPokemon=$numero;
-    	$nuevoTP->idTipo=5;
-    	$nuevoTP->save();
-
+        foreach ($tipo as $t) {
+            $nuevoTP=new pokemon_tipo;
+            $nuevoTP->idPokemon=$numero;
+            $nuevoTP->idTipo=$t;
+            $nuevoTP->save();
+        }
+    	
 
 		return Redirect('/registrarPokemon');
     }
