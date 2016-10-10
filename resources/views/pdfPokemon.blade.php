@@ -36,7 +36,7 @@
 						<th class="sptd">PC</th>
 					</tr>
 					<tr>
-						<td>{{$pokemon->altura}}<td>
+						<td>{{$pokemon->altura}}</td>
 							<td>{{$pokemon->pc}}</td>
 						</tr>
 						<tr>

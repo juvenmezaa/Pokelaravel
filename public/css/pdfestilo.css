@@ -56,8 +56,14 @@ figure div{
 	display: inline-block;
 	height: 40px;
 }
+table{
+	width: 100%;
+}
 td,th{
 	width: 120px;
+}
+td{
+	text-align: center;
 }
 .sptipo{
 	border-radius: 5px;

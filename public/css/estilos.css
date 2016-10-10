@@ -55,6 +55,7 @@ article{
 	display: inline-block;
 	width: 48%;
 	height: 40%;
+	vertical-align: middle;
 }
 .titulopok{
 	font-size: 1em;
