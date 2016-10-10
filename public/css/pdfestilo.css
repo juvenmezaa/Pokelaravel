@@ -33,9 +33,11 @@ figure div{
 
 }
 .sptd{
+	text-align: left;
 	color: white;
 }
 #tblinfo{
+	margin-left: 55px;
 	padding-left: 3%;
 }
 

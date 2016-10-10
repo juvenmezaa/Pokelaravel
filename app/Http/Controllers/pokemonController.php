@@ -63,7 +63,9 @@ class pokemonController extends Controller
     }*/
     public function pokeinfo($id){
          $pokemon=pokemonModel::find($id);
-         return view("pokemoninfo", compact("pokemon"))->lists("idTipo");;
+         $tipos=DB::table("tipo AS t")->join("pokemon_tipo AS pt", "t.id","=","pt.idTipo")->where("pt.idPokemon","=", $id)->select("t.nombre","t.id")->get();
+        
+         return view("pokemoninfo", compact("pokemon","tipos"));
     }
 
     public function pdfPokemon($id){
