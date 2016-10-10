@@ -37,9 +37,10 @@
 	        </li>
 	        <li><a href="{{url('/pokedex')}}"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Pokédex</a></li>
 	      </ul>
-	      <form class="navbar-form navbar-right" role="search">
+	      <form class="navbar-form navbar-right" role="search" action="{{url('/buscar')}}" method="POST">
+			<input type="hidden" name="_token" value="{{csrf_token()}}">
 	        <div class="form-group">
-	          <input type="text" class="form-control" placeholder="Pokémon">
+	          <input type="text" class="form-control" placeholder="Pokémon" name="search">
 	        </div>
 	        <button type="submit" class="btn btn-default">Go</button>
 	      </form>

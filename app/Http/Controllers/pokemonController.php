@@ -87,4 +87,16 @@ class pokemonController extends Controller
         $dompdf->loadHTML($vista);
         return $dompdf->stream();
     }
+    public function buscar(Request $req){
+        $nombre  = $req->input("search");
+        $pokemon=DB::table("pokemon AS p")->where("p.nombre","=", $nombre)->select("p.id")->get();
+        $id;
+        foreach ($pokemon as $p) {
+            $id=$p->id;
+        }
+        if(!isset($id)){
+            return Redirect("/pokedex");
+        }
+        return Redirect("/pokemon/$id");
+    }
 }
