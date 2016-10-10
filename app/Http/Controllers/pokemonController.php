@@ -56,8 +56,20 @@ class pokemonController extends Controller
    		return view("pokedex", compact("pokemon", "pok_tip"));
    	}
 
-    public function pokeinfo($id){
+    /*public function pokeinfo($id){
          $pokemon=pokemonModel::find($id);
          return view("pokemoninfo", compact("pokemon"));
+    }*/
+    public function pokeinfo(){
+        // $pokemon=pokemonModel::find($id);
+         return view("pokemoninfo");
+    }
+
+    public function pdfPokemon($id){
+        $pokemon=pokemonModel::find($id);
+        $vista=view('pdfPokemon', compact('pokemon'));
+        $dompdf=\App::make('dompdf.wrapper');
+        $dompdf->loadHTML($vista);
+        return $dompdf->stream();
     }
 }

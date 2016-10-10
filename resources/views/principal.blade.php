@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
 	<link rel="stylesheet" href="{{asset('css/estilos.css')}}">
 	<link rel="shortcut icon" href="favicon.ico"/>
+	<link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
 </head>
 <body background="img/fondo.png" style="background-size: 80%;">
 	<nav class="navbar navbar-default">

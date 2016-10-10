@@ -1,0 +1,49 @@
+body{
+	margin: 0 auto;
+	font-family: Helvetica;
+}
+figure{
+	background-color: #F3F781;
+    display: block;
+    position: relative;
+    border-radius: 5px;
+    width: 100%;
+    /*padding-top: 5%;*/
+}
+#carta{
+	width: 400px;
+	margin-left: 150px;
+
+}
+figure div{
+	text-align: center;
+}
+.imgpk{
+	margin-top: -230px;
+	float: center;
+	margin-left: -100px;
+}
+#divtabla{
+	padding-top: 3%;
+}
+#tblinfo{
+	padding-left: 3%;
+}
+
+#sppok{
+	font-size: 1em;
+	font-weight: bold;
+
+}
+
+#spPC{
+	font-size: .5em;
+	margin-left: 240px;
+}
+#pc{
+	/*margin-left: 250px;*/
+}
+#headdiv{
+	display: inline-block;
+	height: 40px;
+}
