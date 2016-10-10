@@ -8,6 +8,7 @@ use App\tipoModel;
 use App\pokemon_tipo;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use DB;
 
 class pokemonController extends Controller
 {
@@ -49,7 +50,8 @@ class pokemonController extends Controller
     }
 
    	public function pokedex(){
-        $pokemon=pokemonModel::all();
+        $pokemon=DB::table('pokemon')->paginate(5);
+       // $pokemon=pokemonModel::all();
         $pok_tip=pokemon_tipo::all();
    		return view("pokedex", compact("pokemon", "pok_tip"));
    	}

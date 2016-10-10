@@ -20,7 +20,9 @@
 		</li>
 		@endforeach
 	</ul>
-
+	<div id="paginas">
+		{!! $pokemon->render() !!}
+	</div>
 </section>
 
 
