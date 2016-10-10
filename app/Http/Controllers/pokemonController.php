@@ -68,7 +68,7 @@ class pokemonController extends Controller
 
     public function pdfPokemon($id){
         $pokemon=pokemonModel::find($id);
-        $tipos=DB::table("tipo AS t")->join("pokemon_tipo AS pt", "t.id","=","pt.idTipo")->where("pt.idPokemon","=", $id)->select("t.nombre")->get();
+        $tipos=DB::table("tipo AS t")->join("pokemon_tipo AS pt", "t.id","=","pt.idTipo")->where("pt.idPokemon","=", $id)->select("t.nombre","t.id")->get();
         $vista=view('pdfPokemon', compact('pokemon','tipos'));
         $dompdf=\App::make('dompdf.wrapper');
         $dompdf->loadHTML($vista);

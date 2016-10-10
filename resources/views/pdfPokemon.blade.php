@@ -55,7 +55,7 @@
 					<ul>
 					@foreach($tipos as $t) 
 					<li>
-						<figure class="sptipo $t">
+						<figure class="sptipo {{$t->id}}">
 							{{$t->nombre}}
 						</figure>
 					</li>
