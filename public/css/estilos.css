@@ -40,13 +40,14 @@ figure img{
 	font-color: white;
 	background-color: #1E90FF;
 	border-radius: 5px;
+
 }
 #paginas{
 	text-align: center;
 }
 .info_pokemon{
 	padding-top: -100%;
-	font-family: helvetica;
+	font-family: 'Economica', sans-serif;
 	width: 100%;
 	height: 80%
 }
@@ -60,6 +61,7 @@ article{
 	font-family: 'Economica', sans-serif;
 	/*margin-left: 420px;*/
 	margin-top: -100px;
+	color: black;
 }
 .figpokeinfo{
 	background: #F2F2F2;
