@@ -96,7 +96,7 @@ class pokemonController extends Controller
             $id=$p->id;
         }
         if(!isset($id)){
-            return Redirect("/pokedex");
+            return back()->withInput();
         }
         return Redirect("/pokemon/$id");
     }
