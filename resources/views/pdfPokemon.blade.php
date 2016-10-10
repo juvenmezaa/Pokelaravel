@@ -10,6 +10,7 @@
 		<figure>
 			<div id="headdiv">
 				<br>
+				<span id="sppok">#{{$pokemon->id}}</span>
 				<span id="sppok">{{$pokemon->nombre}}</span>
 				<span id="spPC">PC</span>
 				<span id="pc">{{$pokemon->pc}}</span>
@@ -22,32 +23,48 @@
 			<div id="divtabla">
 				<table id="tblinfo">
 					<tr>
-						<td>Numero</td>
-						<td>{{$pokemon->id}}</td>
+						<th class="sptd">Numero</th>
+						<th class="sptd">Peso</th>
+						
 					</tr>
 					<tr>
-						<td>Peso</td>
+						<td>#{{$pokemon->id}}</td>
 						<td>{{$pokemon->peso}}</td>
 					</tr>
 					<tr>
-						<td>Altura</td>
-						<td>{{$pokemon->altura}}</td>
+						<th class="sptd">Altura</th>
+						<th class="sptd">PC</th>
 					</tr>
 					<tr>
-						<td>PC</td>
-						<td>{{$pokemon->pc}}</td>
-					</tr>
-					<tr>
-						<td>PS</td>
-						<td>{{$pokemon->ps}}</td>
-					</tr>
-					<tr>
-						<td>Polvos</td>
-						<td>{{$pokemon->polvos}}</td>
-					</tr>
-				</table>
+						<td>{{$pokemon->altura}}<td>
+							<td>{{$pokemon->pc}}</td>
+						</tr>
+						<tr>
+							<th class="sptd">PS</th>
+							<th class="sptd">Polvos</th>
+
+						</tr>
+						<tr>
+							<td>{{$pokemon->ps}}</td>
+							<td>{{$pokemon->polvos}}</td>
+						</tr>
+					</table>
+				</div>
+				<br>
+				<div id="infotipos">
+					<ul>
+						<li>
+						<figure class="sptipo 1">
+							Planta
+						</figure>
+						
+					</li>
+				</ul>
+
 			</div>
 		</figure>
+		<br>&nbsp;
+		
 	</div>
 </body>
 </html>

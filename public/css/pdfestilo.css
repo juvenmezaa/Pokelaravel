@@ -3,7 +3,7 @@ body{
 	font-family: Helvetica;
 }
 figure{
-	background-color: #F3F781;
+	background-color: Gold;
     display: block;
     position: relative;
     border-radius: 5px;
@@ -24,7 +24,16 @@ figure div{
 	margin-left: -100px;
 }
 #divtabla{
-	padding-top: 3%;
+	margin-top: 2%;
+	background-color: #1E90FF;
+	border-radius: 5px;
+	margin-left: 18px;
+	width: 91%;
+
+
+}
+.sptd{
+	color: white;
 }
 #tblinfo{
 	padding-left: 3%;
@@ -38,7 +47,7 @@ figure div{
 
 #spPC{
 	font-size: .5em;
-	margin-left: 240px;
+	margin-left: 220px;
 }
 #pc{
 	/*margin-left: 250px;*/
@@ -46,4 +55,40 @@ figure div{
 #headdiv{
 	display: inline-block;
 	height: 40px;
+}
+td,th{
+	width: 120px;
+}
+.sptipo{
+	border-radius: 5px;
+	height: 25px;
+	color: white;
+	width: 80px;
+}
+#infotipos ul li{
+	display: inline-block;
+}
+.1{
+	background-color: #808080;
+}
+.2{
+	background-color: #1E90FF;
+}
+.3{
+	background-color: LimeGreen;	
+}
+.4{
+	background-color:;
+}
+.5{
+	background-color:;
+}
+.6{
+	background-color:;
+}
+.7{
+	background-color:#FF4500;
+}
+.17{
+	background-color: purple;
 }
