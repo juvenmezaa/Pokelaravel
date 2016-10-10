@@ -2510,6 +2510,7 @@ label {
   max-width: 100%;
   margin-bottom: 5px;
   font-weight: bold;
+  color:whitesmoke;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;
@@ -3116,7 +3117,7 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary {
   color: #fff;
   background-color: #CB1D0E;
-  border-color: #FFFFFF;
+  border-color: #CB1D0E;
 }
 .btn-primary:focus,
 .btn-primary.focus {
@@ -4963,7 +4964,7 @@ a.badge:focus {
   margin-bottom: 30px;
   color: inherit;
   background-color: #eee;
-  opacity: .5;
+  opacity: 1;
 }
 .jumbotron h1,
 .jumbotron .h1 {
