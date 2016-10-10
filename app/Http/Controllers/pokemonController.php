@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\pokemonModel;
 use App\tipoModel;
+use App\itemModel;
 use App\pokemon_tipo;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -64,7 +65,7 @@ class pokemonController extends Controller
         return Redirect("/pokedex/$tipo");
     }
     public function pokedex2($idTipo){
-        $pokemon=DB::table("pokemon AS p")->join("pokemon_tipo AS pt", "p.id","=","pt.idPokemon")->join("tipo as t","pt.idTipo","=","t.id")->where("pt.idTipo","=", $idTipo)->select("p.*","t.nombre as nomTipo")->distinct()->paginate(3);
+        $pokemon=DB::table("pokemon AS p")->join("pokemon_tipo AS pt", "p.id","=","pt.idPokemon")->join("tipo as t","pt.idTipo","=","t.id")->where("pt.idTipo","=", $idTipo)->select("p.*","t.nombre as nomTipo")->distinct()->paginate(5);
         return view("pokedex", compact("pokemon"));
     }
 
@@ -98,5 +99,27 @@ class pokemonController extends Controller
             return Redirect("/pokedex");
         }
         return Redirect("/pokemon/$id");
+    }
+    public function darPoder($id){
+        $pokemon=pokemonModel::find($id);
+        $item=itemModel::find(1);
+        $polvos=$item->polvos;
+        $caramelos=$item->caramelos;
+        $polvosPok=$pokemon->polvos;
+        $ps=$pokemon->ps;
+        $pc=$pokemon->pc;
+
+
+        if($caramelos<1)
+            return back()->withInput();
+        if($polvos<$polvosPok)
+            return back()->withInput();
+        $item->polvos=$polvos-$polvosPok;
+        $item->caramelos=$caramelos-1;
+        $item->save();
+        $pokemon->ps= $ps+5;
+        $pokemon->pc= $pc+40;
+        $pokemon->save();
+        return back()->withInput();
     }
 }

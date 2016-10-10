@@ -32,3 +32,4 @@ Route::post('/pokedex/tipo', 'pokemonController@poketipo');
 Route::get('/pokedex/{id}', 'pokemonController@pokedex2');
 
 Route::post('/buscar', 'pokemonController@buscar');
+Route::get('/darPoder/{id}', 'pokemonController@darPoder');

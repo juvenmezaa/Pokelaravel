@@ -45,6 +45,7 @@
 		<div id="divtipos">
 			<article>
 				<a href="{{url('pdfPokemon')}}/{{$pokemon->id}}"><span id="pdfinfopk" class="glyphicon glyphicon-save-file"></span></a>
+				<a href="{{url('darPoder')}}/{{$pokemon->id}}"><span id="pdfinfopk" class="glyphicon glyphicon-plus"></span></a>
 			</article>
 			<article>
 				<b>Tipos</b>
