@@ -53,7 +53,7 @@
 				<br>
 				<div id="infotipos">
 					<ul>
-						<!--@foreach($tipo as $t) 
+					<!--@foreach($tipo as $t) 
 					<li>
 						<figure class="sptipo $t">
 							{{$tipo.nombre}}
@@ -63,7 +63,7 @@
 					@endforeach
 
 					-->
-				</ul>
+					</ul>
 
 			</div>
 		</figure>
