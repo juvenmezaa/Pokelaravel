@@ -65,7 +65,7 @@ td,th{
 	color: white;
 	width: 80px;
 }
-#infotipos ul li{
+#infotipos ul{
 	display: inline-block;
 }
 .1{
@@ -78,10 +78,10 @@ td,th{
 	background-color: LimeGreen;	
 }
 .4{
-	background-color:;
+	background-color: Orange;
 }
 .5{
-	background-color:;
+	background-color: yellow;
 }
 .6{
 	background-color:;
@@ -89,6 +89,38 @@ td,th{
 .7{
 	background-color:#FF4500;
 }
-.17{
-	background-color: purple;
+.8{
+	background-color:HotPink;
 }
+.9{
+	background-color: MediumAquamarine;
+}
+.10{
+	background-color:Chocolate;
+}
+.11{
+	background-color:CadetBlue;
+}
+.12{
+	background-color:ForestGreen;
+}
+.13{
+	background-color: DeepPink;
+}
+.14{
+	background-color:Olive;
+}
+.15{
+	background-color:DimGray;
+}
+.16{
+	background-color:Sienna;
+}
+.17{
+	background-color: MediumOrchid;
+}
+.18{
+	background-color: PaleTurquoise;
+}
+
+
