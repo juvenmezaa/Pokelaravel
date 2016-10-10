@@ -6,7 +6,7 @@
 	<script src="{{asset('js/jquery.min.js')}}"></script>
 	<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
 	<link rel="stylesheet" href="{{asset('css/estilos.css')}}">
-	<link rel="shortcut icon" href="favicon.ico"/>
+	<link rel="shortcut icon" href="{{asset('favicon.ico')}}"/>
 	<link href="https://fonts.googleapis.com/css?family=Economica" rel="stylesheet">
 </head>
 <body background="{{asset('img/fondo.png')}}" style="background-size: 80%;">
