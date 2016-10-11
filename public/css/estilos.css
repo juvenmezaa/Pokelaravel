@@ -82,10 +82,7 @@ article{
 .display figure{
 	margin-left: 180px;
 }
-#divtipos span{
 
-	font-size: 2em;
-}
 #divtipos b{
 	font-size: 1.2em;
 	
@@ -161,7 +158,25 @@ article{
 	background-color: PaleTurquoise;
 }
 #pdfinfopk{
-	padding-left: 80%;
+	padding-left: 20%;
 	color: red;
+	font-size: 2em;
+}
+#spdarpoder{
+	font-size: 1.5em;
+
+	
+
+}
+#artdar div{
+	width: 48%;
+	display: inline-block;
+
+}
+#artdar div b{
+	font-family: 'Economica', sans-serif;
+	font-size: 1.2em;
+	padding-left: 50%;
+	
 }
 

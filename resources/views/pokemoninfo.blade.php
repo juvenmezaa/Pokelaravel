@@ -43,9 +43,11 @@
 			</article>
 		</section>
 		<div id="divtipos">
-			<article>
-				<a href="{{url('pdfPokemon')}}/{{$pokemon->id}}"><span id="pdfinfopk" class="glyphicon glyphicon-save-file"></span></a>
-				<a href="{{url('darPoder')}}/{{$pokemon->id}}"><span id="pdfinfopk" class="glyphicon glyphicon-plus"></span></a>
+			<article id="artdar">
+				<div><a href="{{url('pdfPokemon')}}/{{$pokemon->id}}"><span id="pdfinfopk" class="glyphicon glyphicon-save-file"></span></a>
+				</div>
+				<div>	<b>PC&nbsp;</b><a href="{{url('darPoder')}}/{{$pokemon->id}}"><span id="spdarpoder" class="glyphicon glyphicon-plus"></span></a>
+			</div>
 			</article>
 			<article>
 				<b>Tipos</b>
