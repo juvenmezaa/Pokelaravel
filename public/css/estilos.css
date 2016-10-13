@@ -180,3 +180,10 @@ article{
 	
 }
 
+#infouser{
+	margin-top: 4px;
+	float: right;
+}
+#infouser th{
+	text-align: right;
+}

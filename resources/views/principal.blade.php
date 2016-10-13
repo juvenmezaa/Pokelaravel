@@ -37,6 +37,7 @@
 	        </li>
 	        <li><a href="{{url('/pokedex')}}"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Pokédex</a></li>
 	      </ul>
+
 	      <form class="navbar-form navbar-right" role="search" action="{{url('/buscar')}}" method="POST">
 			<input type="hidden" name="_token" value="{{csrf_token()}}">
 	        <div class="form-group">
@@ -44,7 +45,24 @@
 	        </div>
 	        <button type="submit" class="btn btn-default">Go</button>
 	      </form>
+	      	<div id="infouser">
+
+	      			<table>
+	      				<tr>
+	      					<td><span class="glyphicon glyphicon-record" aria-hidden="true">&nbsp;</span><br></td>
+							<th>{{$item->caramelos}}</th>
+							<td></td>
+	      				</tr>
+	      				<tr>
+	      					<td><span class="glyphicon glyphicon-cloud" aria-hidden="true">&nbsp;</span></td>
+								<th>{{$item->polvos}}</th>
+								<td>&nbsp;</td>	      					
+	      				</tr>
+	      			</table>
+	      		
+	      	</div>
 	    </div>
+	    
 	  </div>
 	</nav>
 	<div class="container">

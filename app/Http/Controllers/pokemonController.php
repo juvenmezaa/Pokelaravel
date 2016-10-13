@@ -14,8 +14,9 @@ use DB;
 class pokemonController extends Controller
 {
     public function registrarPokemon(){
+        $item=itemModel::find(1);
     	$tipos=tipoModel::all();
-    	return view("registrarPokemon", compact("tipos"));
+    	return view("registrarPokemon", compact("tipos","item"));
     }
     public function guardar(Request $request){
 		
@@ -52,21 +53,24 @@ class pokemonController extends Controller
     }
 
    	public function pokedex(){
+        $item=itemModel::find(1);
         $pokemon=DB::table('pokemon')->paginate(5);
-   		return view("pokedex", compact("pokemon"));
+   		return view("pokedex", compact("pokemon", "item"));
    	}
 
     public function poketipos(){
+        $item=itemModel::find(1);
         $tipos=DB::table("tipo AS t")->join("pokemon_tipo AS pt", "t.id","=","pt.idTipo")->select("t.*")->distinct()->get();
-        return view("poketipos", compact("tipos"));
+        return view("poketipos", compact("tipos","item"));
     }
     public function poketipo(Request $request){
         $tipo = $request->input("tipo");
         return Redirect("/pokedex/$tipo");
     }
     public function pokedex2($idTipo){
+        $item=itemModel::find(1);
         $pokemon=DB::table("pokemon AS p")->join("pokemon_tipo AS pt", "p.id","=","pt.idPokemon")->join("tipo as t","pt.idTipo","=","t.id")->where("pt.idTipo","=", $idTipo)->select("p.*","t.nombre as nomTipo")->distinct()->paginate(5);
-        return view("pokedex", compact("pokemon"));
+        return view("pokedex", compact("pokemon","item"));
     }
 
     /*public function pokeinfo($id){
@@ -74,10 +78,11 @@ class pokemonController extends Controller
          return view("pokemoninfo", compact("pokemon"));
     }*/
     public function pokeinfo($id){
+         $item=itemModel::find(1);
          $pokemon=pokemonModel::find($id);
          $tipos=DB::table("tipo AS t")->join("pokemon_tipo AS pt", "t.id","=","pt.idTipo")->where("pt.idPokemon","=", $id)->select("t.nombre","t.id")->get();
         
-         return view("pokemoninfo", compact("pokemon","tipos"));
+         return view("pokemoninfo", compact("pokemon","tipos","item"));
     }
 
     public function pdfPokemon($id){

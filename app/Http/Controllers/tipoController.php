@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\tipoModel;
+use App\itemModel;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
@@ -11,7 +12,8 @@ use DB;
 class tipoController extends Controller
 {
 	public function registrarTipo(){
-    	return view("registrarTipo");
+    	$item=itemModel::find(1);
+        return view("registrarTipo", compact("item"));
     }
     public function guardar(Request $request){
 		$nombre = $request -> input("nombre");
@@ -25,7 +27,8 @@ class tipoController extends Controller
     }
     public function consultar(){
     	$tipos=DB::table('tipo')->paginate(5);
-    	return view("consultarTipos", compact("tipos"));
+    	$item=itemModel::find(1);
+        return view("consultarTipos", compact("tipos","item"));
     }
     public function eliminar($id){
         tipoModel::find($id)->delete();
@@ -33,7 +36,8 @@ class tipoController extends Controller
     }
     public function actualizarTipo($id){
         $tipo=tipoModel::find($id);
-        return view("actualizarTipo", compact("tipo"));
+        $item=itemModel::find(1);
+        return view("actualizarTipo", compact("tipo", "item"));
     }
     public function actualizar($id, Request $request){
         $tipo=tipoModel::find($id);
